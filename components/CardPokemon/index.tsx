@@ -6,10 +6,11 @@ import Image from "next/image";
 import NoImage from "@/assets/no-image-icon.png";
 
 interface IProps {
-  src: string;
+  src?: string;
   bgColorCard: string;
   pokemon: IPokemon;
   pokemonSpecies: IPokemonSpecies;
+  dataTestId: string;
 }
 
 export default function CardPokemon({
@@ -17,9 +18,10 @@ export default function CardPokemon({
   bgColorCard,
   pokemon,
   pokemonSpecies,
+  dataTestId,
 }: IProps) {
   return (
-    <article className={style.card}>
+    <article className={style.card} data-testid={dataTestId}>
       <Image
         width={200}
         height={200}

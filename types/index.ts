@@ -34,7 +34,7 @@ export interface Species {
 
 export interface Cries {
   latest: string;
-  legacy: null;
+  legacy: string | null;
 }
 
 export interface Move {
@@ -80,11 +80,11 @@ export interface Sprites {
   back_default: null | string;
   back_female: null;
   back_shiny: null | string;
-  back_shiny_female: null;
+  back_shiny_female: null | string;
   front_default: null | string;
-  front_female: null;
+  front_female: null | string;
   front_shiny: null | string;
-  front_shiny_female: null;
+  front_shiny_female: null | string;
   other?: Other;
   versions?: Versions;
   animated?: Sprites;
@@ -96,12 +96,12 @@ export interface GenerationI {
 }
 
 export interface RedBlue {
-  back_default: null;
-  back_gray: null;
-  back_transparent: null;
-  front_default: null;
-  front_gray: null;
-  front_transparent: null;
+  back_default: null | string;
+  back_gray: null | string;
+  back_transparent: null | string;
+  front_default: null | string;
+  front_gray: null | string;
+  front_transparent: null | string;
 }
 
 export interface GenerationIi {
@@ -111,22 +111,22 @@ export interface GenerationIi {
 }
 
 export interface Crystal {
-  back_default: null;
-  back_shiny: null;
-  back_shiny_transparent: null;
-  back_transparent: null;
-  front_default: null;
-  front_shiny: null;
-  front_shiny_transparent: null;
-  front_transparent: null;
+  back_default: null | string;
+  back_shiny: null | string;
+  back_shiny_transparent: null | string;
+  back_transparent: null | string;
+  front_default: null | string;
+  front_shiny: null | string;
+  front_shiny_transparent: null | string;
+  front_transparent: null | string;
 }
 
 export interface Gold {
-  back_default: null;
-  back_shiny: null;
-  front_default: null;
-  front_shiny: null;
-  front_transparent?: null;
+  back_default: null | string;
+  back_shiny: null | string;
+  front_default: null | string;
+  front_shiny: null | string;
+  front_transparent?: null | string;
 }
 
 export interface GenerationIii {
@@ -142,9 +142,9 @@ export interface OfficialArtwork {
 
 export interface Home {
   front_default: string;
-  front_female: null;
+  front_female: null | string;
   front_shiny: string;
-  front_shiny_female: null;
+  front_shiny_female: null | string;
 }
 
 export interface GenerationVii {
@@ -154,7 +154,7 @@ export interface GenerationVii {
 
 export interface DreamWorld {
   front_default: null | string;
-  front_female: null;
+  front_female: null | string;
 }
 
 export interface GenerationViii {
@@ -178,7 +178,7 @@ export interface IPokemonSpecies {
   color: Color;
   egg_groups: Color[];
   evolution_chain: EvolutionChain;
-  evolves_from_species: null;
+  evolves_from_species: null | any;
   flavor_text_entries: FlavorTextEntry[];
   form_descriptions: any[];
   forms_switchable: boolean;
