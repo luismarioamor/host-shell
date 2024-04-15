@@ -6,12 +6,21 @@ const prod = process.env.NODE_ENV === "production";
 const urlPokemonOne = prod
   ? "https://pokemon-one-gules.vercel.app"
   : "http://localhost:3001";
+
+const urlPokemonTwo = prod
+  ? "https://pokemon-two-two.vercel.app"
+  : "http://localhost:3002";
+
+const urlPokemonThree = prod
+  ? " https://pokemon-three-five.vercel.app"
+  : "http://localhost:3003";
+
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
     pokemonOne: `pokemon-one@${urlPokemonOne}/_next/static/${location}/remoteEntry.js`,
-    pokemonTwo: `pokemon-two@http://localhost:3002/_next/static/${location}/remoteEntry.js`,
-    pokemonThree: `pokemon-three@http://localhost:3003/_next/static/${location}/remoteEntry.js`,
+    pokemonTwo: `pokemon-two@${urlPokemonTwo}/_next/static/${location}/remoteEntry.js`,
+    pokemonThree: `pokemon-three@${urlPokemonThree}/_next/static/${location}/remoteEntry.js`,
   };
 };
 const nextConfig = {
