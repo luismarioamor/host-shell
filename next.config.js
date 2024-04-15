@@ -4,6 +4,7 @@ const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
     pokemonOne: `pokemon-one@http://localhost:3001/_next/static/${location}/remoteEntry.js`,
+    pokemonTwo: `pokemon-two@http://localhost:3002/_next/static/${location}/remoteEntry.js`,
   };
 };
 const nextConfig = {
@@ -20,6 +21,9 @@ const nextConfig = {
       })
     );
     return config;
+  },
+  images: {
+    domains: ["raw.githubusercontent.com"],
   },
 };
 

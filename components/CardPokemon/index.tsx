@@ -2,6 +2,8 @@ import React from "react";
 import style from "./style.module.css";
 import { color, background } from "./colors";
 import { IPokemon, IPokemonSpecies } from "@/types";
+import Image from "next/image";
+import NoImage from "@/assets/no-image-icon.png";
 
 interface IProps {
   src: string;
@@ -18,11 +20,11 @@ export default function CardPokemon({
 }: IProps) {
   return (
     <article className={style.card}>
-      <img
+      <Image
         width={200}
         height={200}
         className={style.img_poke}
-        src={src}
+        src={src || NoImage}
         alt="pokemon"
       />
 
