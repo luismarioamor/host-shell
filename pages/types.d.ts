@@ -24,3 +24,9 @@ declare module "pokemonTwo/pokemonTwo" {
   const PokemonTwo: React.FC<{}>;
   export default PokemonTwo;
 }
+
+declare module "pokemonThree/pokemonThree" {
+  import React from "react";
+  const PokemonThree: React.FC<{}>;
+  export default PokemonThree;
+}

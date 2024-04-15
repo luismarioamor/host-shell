@@ -16,6 +16,12 @@ const PokemonTwo = dynamic(() => import("pokemonTwo/pokemonTwo"), {
   loading: () => <p>Loading...</p>,
 });
 
+const PokemonThree = dynamic(() => import("pokemonThree/pokemonThree"), {
+  ssr: false,
+  suspense: true,
+  loading: () => <p>Loading...</p>,
+});
+
 export default function Home() {
   useEffect(() => {
     const handleButtonClick = () => {
@@ -46,7 +52,7 @@ export default function Home() {
           <section className={style.section}>
             <PokemonOne />
             <PokemonTwo />
-            <PokemonOne />
+            <PokemonThree />
           </section>
         </div>
       </main>

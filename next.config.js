@@ -5,6 +5,7 @@ const remotes = (isServer) => {
   return {
     pokemonOne: `pokemon-one@http://localhost:3001/_next/static/${location}/remoteEntry.js`,
     pokemonTwo: `pokemon-two@http://localhost:3002/_next/static/${location}/remoteEntry.js`,
+    pokemonThree: `pokemon-three@http://localhost:3003/_next/static/${location}/remoteEntry.js`,
   };
 };
 const nextConfig = {
