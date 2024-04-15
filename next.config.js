@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const { NextFederationPlugin } = require("@module-federation/nextjs-mf");
+
+const prod = process.env.NODE_ENV === "production";
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
